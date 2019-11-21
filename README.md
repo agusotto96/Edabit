@@ -1,2 +1,2 @@
 # Edabit
-Repositorio con los ejercicios del sitio web [edabit](https://edabit.com/).
+Repositorio con ejercicios realizados del sitio web [edabit](https://edabit.com/).
