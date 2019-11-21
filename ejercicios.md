@@ -1,4 +1,4 @@
-**Check Magic Square**
+## Check Magic Square
 
 A "magic square" is a square divided into smaller squares each containing a number, such that the numbers in each vertical, horizontal, and diagonal row add up to the same value.  
 Write a function that takes a 2D array, checks if it's a magic square and returns either true or false depending on the result.
@@ -38,7 +38,7 @@ public static boolean isMagicSquare(int[][] square) {
     }
 ```
 
-**The Recamán Sequence**
+## The Recamán Sequence
 
 The Recamán Sequence is a numeric sequence that starts always with 0. The position of a positive integer in the sequence, or Recamán Index, can be established with the following algorithm:
 
