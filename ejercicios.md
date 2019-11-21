@@ -1,3 +1,4 @@
+----------------------------------------------------------------------------------------------------------------------
 **Check Magic Square**
 
 A "magic square" is a square divided into smaller squares each containing a number, such that the numbers in each vertical, horizontal, and diagonal row add up to the same value.  
