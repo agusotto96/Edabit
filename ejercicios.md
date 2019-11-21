@@ -37,7 +37,9 @@ public static boolean isMagicSquare(int[][] square) {
         return true;
     }
 ```
+
 ----------------------------------------------------------------------------------------------------------------------
+
 **The Recamán Sequence**
 
 The Recamán Sequence is a numeric sequence that starts always with 0. The position of a positive integer in the sequence, or Recamán Index, can be established with the following algorithm:
@@ -68,4 +70,5 @@ public static int recamanIndex(int n) {
         return largo - 1;
     }
 ```
+
 ----------------------------------------------------------------------------------------------------------------------
