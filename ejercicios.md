@@ -56,10 +56,13 @@ Given a positive integer n, implement a function that returns its Recamán Index
 
 ```java
 public static int recamanIndex(int n) {
+
+        String registro = " 0 ";
         int ultimoValor = 0;
         int largo = 1;
-        String registro = " 0 ";
+        
         while (!registro.contains(" " + n + " ")) {
+        
             if (ultimoValor - largo > 0 && !registro.contains(" " + (ultimoValor - largo) + " ")) {
                 ultimoValor = ultimoValor - largo;
                 registro = registro + " " + ultimoValor + " ";
@@ -69,7 +72,11 @@ public static int recamanIndex(int n) {
                 registro = registro + " " + ultimoValor + " ";
                 largo++;
             }
+            
         }
-        return largo - 1;
-    }
+        
+        int indice = largo - 1;
+        
+        return indice;
+}
 ```
