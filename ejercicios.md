@@ -5,10 +5,12 @@ Write a function that takes a 2D array, checks if it's a magic square and return
 
 ```java
 public static boolean isMagicSquare(int[][] square) {
+
         int sumatoriaDiagonal1 = 0;
         for (int i = 0; i < square.length; i++) {
             sumatoriaDiagonal1 = sumatoriaDiagonal1 + square[i][i];
         }
+        
         int sumatoriaDiagonal2 = 0;
         for (int i = 0; i < square.length; i++) {
             sumatoriaDiagonal2 = sumatoriaDiagonal2 + square[i][(square.length - 1) - i];
@@ -16,6 +18,7 @@ public static boolean isMagicSquare(int[][] square) {
         if (sumatoriaDiagonal1 != sumatoriaDiagonal2) {
             return false;
         }
+        
         for (int i = 0; i < square.length; i++) {
             int sumatoriaFila = 0;
             for (int j = 0; j < square.length; j++) {
@@ -25,6 +28,7 @@ public static boolean isMagicSquare(int[][] square) {
                 return false;
             }
         }
+        
         for (int i = 0; i < square.length; i++) {
             int sumatoriaColumna = 0;
             for (int j = 0; j < square.length; j++) {
@@ -34,8 +38,9 @@ public static boolean isMagicSquare(int[][] square) {
                 return false;
             }
         }
+        
         return true;
-    }
+}
 ```
 
 ## The Recamán Sequence
