@@ -73,7 +73,7 @@ Given a positive integer n, implement a function that returns its Recamán Index
 ## Left Rotation
 
 A left rotation operation on an array shifts each of the array's elements  unit to the left.  
-Given an array *a* of *n* integers and a number, *d*, perform *d* left rotations on the array.  
+Given an array *a* of integers perform *d* left rotations on the array.  
 Return the updated array.
 
 ```java
