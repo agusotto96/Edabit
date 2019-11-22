@@ -129,5 +129,7 @@ It's New Year's Day and everyone's in line for the Wonderland rollercoaster ride
 Create a function called minimumBribes, it must print an integer representing the minimum number of bribes necessary or "Too chaotic" if the line configuration is not possible.
 
 ```java
+    static void minimumBribes(int[] q) {
 
+    }
 ```
