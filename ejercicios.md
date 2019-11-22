@@ -125,6 +125,7 @@ It's New Year's Day and everyone's in line for the Wonderland rollercoaster ride
 * If two people swap positions, they still wear the same sticker denoting their original places in line.  
 * One person can bribe at most two others.  
 * You want to know the minimum number of bribes that took place to get the queue into its current state.  
+
 Create a function called minimumBribes, it must print an integer representing the minimum number of bribes necessary or "Too chaotic" if the line configuration is not possible.
 
 ```java
