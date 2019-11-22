@@ -79,12 +79,37 @@ Return the updated array.
 ```java
     static int[] rotLeft(int[] a, int d) {
         for (int i = 0; i < d; i++) {
-            int aux = a[0];
+            int auxiliar = a[0];
             for (int j = 0; j < a.length - 1; j++) {
                 a[j] = a[j + 1];
             }
-            a[a.length - 1] = aux;
+            a[a.length - 1] = auxiliar;
         }
         return a;
+    }
+```
+
+## Hourglass
+
+Given a 2D array *arr* we define an hourglass to be a subset of values with indices falling in the following pattern:
+a b c  
+  d  
+e f g  
+An hourglass sum is the sum of an hourglass' values.
+Calculate the hourglass sum for every hourglass in *arr*, then return the maximum hourglass sum.
+
+```java
+    static int hourglassSum(int[][] arr) {
+        int hourglassSum;
+        int maxHourglass = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length - 2; i++) {
+            for (int j = 0; j < arr.length - 2; j++) {
+                hourglassSum = arr[i][j] + arr[i][j + 1] + arr[i][j + 2] + arr[i + 1][j + 1] + arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
+                if (hourglassSum > maxHourglass) {
+                    maxHourglass = hourglassSum;
+                }
+            }
+        }
+        return maxHourglass;
     }
 ```
