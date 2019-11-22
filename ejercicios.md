@@ -93,9 +93,9 @@ Return the updated array.
 
 Given a 2D array *arr* we define an hourglass to be a subset of values with indices falling in the following pattern:  
 ```
-1 1 1  
-0 1 0  
-1 1 1
+a b c  
+  d    
+e f g
 ```
 An hourglass sum is the sum of an hourglass' values.
 Calculate the hourglass sum for every hourglass in *arr*, then return the maximum hourglass sum.
