@@ -130,6 +130,14 @@ Create a function called minimumBribes, it must print an integer representing th
 
 ```java
     static void minimumBribes(int[] q) {
-
+        boolean chaos = false;
+        for (int i = 0; i < q.length; i++) {
+            if (i < (q[i] - 1)-2) {
+                chaos = true;
+            }
+        }
+        if (chaos) {
+            System.out.println("Too chaotic");
+        }
     }
 ```
