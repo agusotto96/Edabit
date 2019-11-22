@@ -91,7 +91,7 @@ Return the updated array.
 
 ## Hourglass
 
-Given a 2D array *arr* we define an hourglass to be a subset of values with indices falling in the following pattern:
+Given a 2D array *arr* we define an hourglass to be a subset of values with indices falling in the following pattern:  
 a b c  
   d  
 e f g  
