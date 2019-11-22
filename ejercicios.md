@@ -126,10 +126,10 @@ Gary is an avid hiker. He tracks his hikes meticulously, paying close attention 
 Given Gary's sequence of up and down steps during his last hike, find and print the number of valleys he walked through.
 
 ```java
-    static int countingValleys(int n, String s) {
+    static int countingValleys(String s) {
         int level = 0;
         int valleys = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == 'U') {
                 level++;
             } else {
