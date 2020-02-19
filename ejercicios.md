@@ -161,6 +161,8 @@ Because the wires are on a grid, use the Manhattan distance for this measurement
 
 What is the Manhattan distance from the central port to the closest intersection?
 
+------------------------------------------------------
+
 Calculate the number of steps each wire takes to reach each intersection; choose the intersection where the sum of both wires' steps is lowest.
 * If a wire visits a position on the grid multiple times, use the steps value from the first time it visits that position when calculating the total value of a specific intersection.
 * The number of steps a wire takes is the total number of grid squares the wire has entered to get to that location, including the intersection being considered.
