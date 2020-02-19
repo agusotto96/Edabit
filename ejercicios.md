@@ -50,24 +50,33 @@ The Recamán Sequence is a numeric sequence that starts always with 0. The posit
 Given a positive integer n, implement a function that returns its Recamán Index.
 
 ```java
-    public static int recamanIndex(int n) {
-        String registro = " 0 ";
-        int ultimoValor = 0;
-        int largo = 1;
-        while (!registro.contains(" " + n + " ")) {
-            if (ultimoValor - largo > 0 && !registro.contains(" " + (ultimoValor - largo) + " ")) {
-                ultimoValor = ultimoValor - largo;
-                registro = registro + " " + ultimoValor + " ";
-                largo++;
-            } else {
-                ultimoValor = ultimoValor + largo;
-                registro = registro + " " + ultimoValor + " ";
-                largo++;
-            }
-        }
-        int indice = largo - 1;
-        return indice;
-    }
+
+	public static int calculateRecamanIndex(int n) {
+
+		ArrayList<Integer> recamanSequence = new ArrayList<Integer>();
+		int sequenceLength;
+		int recamanIndex;
+		int lastElement;
+
+		recamanSequence.add(0);
+
+		do {
+
+			sequenceLength = recamanSequence.size();
+			recamanIndex = sequenceLength - 1;
+			lastElement = recamanSequence.get(recamanIndex);
+
+			if (lastElement - sequenceLength > 0 && !recamanSequence.contains(lastElement - sequenceLength)) {
+				recamanSequence.add(lastElement - sequenceLength);
+			} else {
+				recamanSequence.add(lastElement + sequenceLength);
+			}
+
+		} while (lastElement != n);
+
+		return recamanIndex;
+
+	}
 ```
 
 ## Left Rotation
