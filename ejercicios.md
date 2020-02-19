@@ -56,7 +56,6 @@ The Recamán Sequence is a numeric sequence that starts always with 0. The posit
 Given a positive integer n, implement a function that returns its Recamán Index.
 
 ```java
-
 public static int calculateRecamanIndex(int n) {
 
 	ArrayList<Integer> recamanSequence = new ArrayList<Integer>();
@@ -85,75 +84,25 @@ public static int calculateRecamanIndex(int n) {
 }
 ```
 
-## Left Rotation
+## The Fibonacci Sequence
 
-A left rotation operation on an array shifts each of the array's elements  unit to the left.  
-Given an array *a* of integers perform *d* left rotations on the array.  
-Return the updated array.
-
-```java
-    static int[] rotLeft(int[] a, int d) {
-        for (int i = 0; i < d; i++) {
-            int auxiliar = a[0];
-            for (int j = 0; j < a.length - 1; j++) {
-                a[j] = a[j + 1];
-            }
-            a[a.length - 1] = auxiliar;
-        }
-        return a;
-    }
-```
-
-## Hourglass
-
-Given a 2D array *arr* we define an hourglass to be a subset of values with indices falling in the following pattern:  
-```
-a b c  
-  d    
-e f g
-```
-An hourglass sum is the sum of an hourglass' values.
-Calculate the hourglass sum for every hourglass in *arr*, then return the maximum hourglass sum.
+The Fibonacci is a sequence of numbers that appears in nature all around us, in the arrangement of seeds in a sunflower and the spiral of a nautilus for example.
+* It begins with 0 and 1 as its first and second terms.
+* After these first two elements, each subsequent element is equal to the sum of the previous two elements.
+Write a function that returns the Fibonacci sequence and receives as input the length of the sequence.
 
 ```java
-    static int hourglassSum(int[][] arr) {
-        int hourglassSum;
-        int maxHourglass = Integer.MIN_VALUE;
-        for (int i = 0; i < arr.length - 2; i++) {
-            for (int j = 0; j < arr.length - 2; j++) {
-                hourglassSum = arr[i][j] + arr[i][j + 1] + arr[i][j + 2] + arr[i + 1][j + 1] + arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
-                if (hourglassSum > maxHourglass) {
-                    maxHourglass = hourglassSum;
-                }
-            }
-        }
-        return maxHourglass;
-    }
-```
-
-## Counting Valleys
-
-Gary is an avid hiker. He tracks his hikes meticulously, paying close attention to small details like topography. During his last hike he took exactly *n* steps. For every step he took, he noted if it was an uphill, *U*, or a downhill, *D* step. Gary's hikes start and end at sea level and each step up or down represents a 1 unit change in altitude. We define the following terms:
-
-* A mountain is a sequence of consecutive steps above sea level, starting with a step up from sea level and ending with a step down to sea level.
-* A valley is a sequence of consecutive steps below sea level, starting with a step down from sea level and ending with a step up to sea level.
-
-Given Gary's sequence of up and down steps during his last hike, find and print the number of valleys he walked through.
-
-```java
-    static int countingValleys(String s) {
-        int level = 0;
-        int valleys = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == 'U') {
-                level++;
-            } else {
-                if (level == 0) {
-                    valleys++;
-                }
-                level--;
-            }
-        }
-        return valleys;
-    }
+public static int[] calculateFibonacciSequence(int largo) {
+		
+	int[] fibonacciSequence = new int[largo];
+	fibonacciSequence[0] = 0;
+	fibonacciSequence[1] = 1;
+		
+	for (int i = 2; i < fibonacciSequence.length; i++) {
+		fibonacciSequence[i] = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
+	}
+		
+	return fibonacciSequence;
+		
+}
 ```
