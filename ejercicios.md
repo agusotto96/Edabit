@@ -94,16 +94,29 @@ Write a function that returns the Fibonacci sequence and receives as input the l
 
 ```java
 public static int[] calculateFibonacciSequence(int sequenceLength) {
-		
+
 	int[] fibonacciSequence = new int[sequenceLength];
-	fibonacciSequence[0] = 0;
-	fibonacciSequence[1] = 1;
-		
-	for (int i = 2; i < sequenceLength; i++) {
-		fibonacciSequence[i] = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
+
+	switch (sequenceLength) {
+
+	case 0:
+		break;
+
+	case 1:
+		fibonacciSequence[0] = 0;
+		break;
+
+	default:
+		fibonacciSequence[0] = 0;
+		fibonacciSequence[1] = 1;
+
+		for (int i = 2; i < sequenceLength; i++) {
+			fibonacciSequence[i] = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
+		}
+
 	}
-		
+
 	return fibonacciSequence;
-		
+
 }
 ```
