@@ -150,3 +150,12 @@ public static int convertToBinary(int number) {
 
 }
 ```
+
+## Crossed Wires
+
+Two wires are connected to a central port and extend outward on a grid.
+The wires twist and turn, but the two wires occasionally cross paths.
+To fix the circuit, you need to find the intersection point closest to the central port.
+Because the wires are on a grid, use the Manhattan distance for this measurement.
+While the wires do technically cross right at the central port where they both start, this point does not count, nor does a wire count as crossing with itself.  
+What is the Manhattan distance from the central port to the closest intersection?
