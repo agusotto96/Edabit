@@ -153,6 +153,8 @@ public static int convertToBinary(int number) {
 
 ## Crossed Wires
 
+### Part 1
+
 Two wires are connected to a central port and extend outward on a grid.
 The wires twist and turn, but the two wires occasionally cross paths.
 You need to find the intersection point closest to the central port.
@@ -161,7 +163,7 @@ Because the wires are on a grid, use the Manhattan distance for this measurement
 
 What is the Manhattan distance from the central port to the closest intersection?
 
-------------------------------------------------------
+### Part 2
 
 Calculate the number of steps each wire takes to reach each intersection; choose the intersection where the sum of both wires' steps is lowest.
 * If a wire visits a position on the grid multiple times, use the steps value from the first time it visits that position when calculating the total value of a specific intersection.
