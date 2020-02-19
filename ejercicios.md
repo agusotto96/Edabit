@@ -88,7 +88,7 @@ public static int calculateRecamanIndex(int n) {
 
 The Fibonacci is a sequence of numbers that appears in nature all around us, in the arrangement of seeds in a sunflower and the spiral of a nautilus for example.
 * It begins with 0 and 1 as its first and second terms.
-* After these first two elements, each subsequent element is equal to the sum of the previous two elements.
+* After these first two elements, each subsequent element is equal to the sum of the previous two elements.  
 Write a function that returns the Fibonacci sequence and receives as input the length of the sequence.
 
 ```java
