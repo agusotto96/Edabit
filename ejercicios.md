@@ -92,13 +92,13 @@ The Fibonacci is a sequence of numbers that appears in nature all around us, in 
 Write a function that returns the Fibonacci sequence and receives as input the length of the sequence.
 
 ```java
-public static int[] calculateFibonacciSequence(int largo) {
+public static int[] calculateFibonacciSequence(int sequenceLength) {
 		
-	int[] fibonacciSequence = new int[largo];
+	int[] fibonacciSequence = new int[sequenceLength];
 	fibonacciSequence[0] = 0;
 	fibonacciSequence[1] = 1;
 		
-	for (int i = 2; i < fibonacciSequence.length; i++) {
+	for (int i = 2; i < sequenceLength; i++) {
 		fibonacciSequence[i] = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
 	}
 		
