@@ -151,4 +151,4 @@ public static String convertToBinary(int number) {
 	return result;
 
 }
-```java
+```
