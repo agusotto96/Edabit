@@ -157,13 +157,13 @@ Two wires are connected to a central port and extend outward on a grid.
 The wires twist and turn, but the two wires occasionally cross paths.
 You need to find the intersection point closest to the central port.
 Because the wires are on a grid, use the Manhattan distance for this measurement.
-While the wires do technically cross right at the central port where they both start, this point does not count, nor does a wire count as crossing with itself.
+* While the wires do technically cross right at the central port where they both start, this point does not count, nor does a wire count as crossing with itself.
 
 What is the Manhattan distance from the central port to the closest intersection?
 
 Calculate the number of steps each wire takes to reach each intersection; choose the intersection where the sum of both wires' steps is lowest.
-If a wire visits a position on the grid multiple times, use the steps value from the first time it visits that position when calculating the total value of a specific intersection.
-The number of steps a wire takes is the total number of grid squares the wire has entered to get to that location, including the intersection being considered.
+* If a wire visits a position on the grid multiple times, use the steps value from the first time it visits that position when calculating the total value of a specific intersection.
+* The number of steps a wire takes is the total number of grid squares the wire has entered to get to that location, including the intersection being considered.
 
 What is the fewest combined steps the wires must take to reach an intersection?
 
