@@ -121,7 +121,7 @@ public static int[] calculateFibonacciSequence(int sequenceLength) {
 }
 ```
 
-## Check Magic Square
+## Binary Converter
 
 Given a decimal number as input, write a function to convert the given decimal number into equivalent binary.
 
