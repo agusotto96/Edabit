@@ -120,3 +120,35 @@ public static int[] calculateFibonacciSequence(int sequenceLength) {
 
 }
 ```
+
+## Check Magic Square
+
+Given a decimal number as input, write a function to convert the given decimal number into equivalent binary.
+
+```java
+public static String convertToBinary(int number) {
+
+	if (number == 0) {
+		return "0";
+	}
+
+	int digits = 1;
+	String result = "";
+
+	while ((int) Math.pow(2, digits) <= number) {
+		digits++;
+	}
+
+	for (int i = digits - 1; i >= 0; i--) {
+		if (number - (int) Math.pow(2, i) >= 0) {
+			result = result + 1;
+			number = number - (int) Math.pow(2, i);
+		} else {
+			result = result + 0;
+		}
+	}
+
+	return result;
+
+}
+```java
