@@ -51,32 +51,32 @@ Given a positive integer n, implement a function that returns its Recamán Index
 
 ```java
 
-	public static int calculateRecamanIndex(int n) {
+public static int calculateRecamanIndex(int n) {
 
-		ArrayList<Integer> recamanSequence = new ArrayList<Integer>();
-		int sequenceLength;
-		int recamanIndex;
-		int lastElement;
+	ArrayList<Integer> recamanSequence = new ArrayList<Integer>();
+	int sequenceLength;
+	int recamanIndex;
+	int lastElement;
+	
+	recamanSequence.add(0);
+	
+	do {
+		
+		sequenceLength = recamanSequence.size();
+		recamanIndex = sequenceLength - 1;
+		lastElement = recamanSequence.get(recamanIndex);
+		
+		if (lastElement - sequenceLength > 0 && !recamanSequence.contains(lastElement - sequenceLength)) {
+			recamanSequence.add(lastElement - sequenceLength);
+		} else {
+			recamanSequence.add(lastElement + sequenceLength);
+		}
 
-		recamanSequence.add(0);
+	} while (lastElement != n);
 
-		do {
+	return recamanIndex;
 
-			sequenceLength = recamanSequence.size();
-			recamanIndex = sequenceLength - 1;
-			lastElement = recamanSequence.get(recamanIndex);
-
-			if (lastElement - sequenceLength > 0 && !recamanSequence.contains(lastElement - sequenceLength)) {
-				recamanSequence.add(lastElement - sequenceLength);
-			} else {
-				recamanSequence.add(lastElement + sequenceLength);
-			}
-
-		} while (lastElement != n);
-
-		return recamanIndex;
-
-	}
+}
 ```
 
 ## Left Rotation
