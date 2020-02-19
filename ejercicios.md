@@ -126,14 +126,14 @@ public static int[] calculateFibonacciSequence(int sequenceLength) {
 Given a decimal number as input, write a function to convert the given decimal number into equivalent binary.
 
 ```java
-public static String convertToBinary(int number) {
+public static int convertToBinary(int number) {
 
 	if (number == 0) {
-		return "0";
+		return 0;
 	}
 
 	int digits = 1;
-	String result = "";
+	int result = 0;
 
 	while ((int) Math.pow(2, digits) <= number) {
 		digits++;
@@ -141,10 +141,8 @@ public static String convertToBinary(int number) {
 
 	for (int i = digits - 1; i >= 0; i--) {
 		if (number - (int) Math.pow(2, i) >= 0) {
-			result = result + 1;
+			result = result + (int) Math.pow(10, i);
 			number = number - (int) Math.pow(2, i);
-		} else {
-			result = result + 0;
 		}
 	}
 
